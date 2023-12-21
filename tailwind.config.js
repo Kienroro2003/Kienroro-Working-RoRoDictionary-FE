@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      transparent: "transparent",
+      current: "currentColor",
       colors: {
         primary: {
           DEFAULT: "#796EFF",
@@ -103,6 +106,30 @@ module.exports = {
             80: "#331014",
             90: "#1A080A",
           },
+        },
+        black: {
+          DEFAULT: "#1B2432",
+          10: "#323A46",
+          20: "#49505B",
+          30: "#5F666F",
+          40: "#767C84",
+          50: "#8D9198",
+          60: "#A4A7AD",
+          70: "#BBBDC1",
+          80: "#D1D3D6",
+          90: "#E8E9EA",
+        },
+        white: {
+          DEFAULT: "#fff",
+          10: "#E5E5E5",
+          20: "#CCC",
+          30: "#B3B3B3",
+          40: "#999",
+          50: "#808080",
+          60: "#666",
+          70: "#4D4D4D",
+          80: "#333",
+          90: "#1A1A1A",
         },
       },
       fontSize: {
