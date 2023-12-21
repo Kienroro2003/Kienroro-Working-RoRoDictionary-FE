@@ -145,7 +145,56 @@ module.exports = {
           "1.6rem",
           {
             lineHeight: "150%",
+            fontWeight: "500",
+          },
+        ],
+        "body-3": [
+          "1.6rem",
+          {
+            lineHeight: "150%",
+            fontWeight: "400",
+          },
+        ],
+        "body-4": [
+          "1.4rem",
+          {
+            lineHeight: "157.143%",
             fontWeight: "600",
+          },
+        ],
+        "body-5": [
+          "1.4rem",
+          {
+            lineHeight: "157.143%",
+            fontWeight: "500",
+          },
+        ],
+        "body-6": [
+          "1.4rem",
+          {
+            lineHeight: "157.143%",
+            fontWeight: "400",
+          },
+        ],
+        "body-7": [
+          "1.2rem",
+          {
+            lineHeight: "150%",
+            fontWeight: "600",
+          },
+        ],
+        "body-8": [
+          "1.2rem",
+          {
+            lineHeight: "150%",
+            fontWeight: "500",
+          },
+        ],
+        "body-9": [
+          "1.2rem",
+          {
+            lineHeight: "150%",
+            fontWeight: "400",
           },
         ],
       },
