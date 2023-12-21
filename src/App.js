@@ -7,7 +7,7 @@ function App() {
         <h1 className="bg-black-90 text-primary-light-10 text-heading-1">
           Heading 1
         </h1>
-        <input type="text" className="" placeholder="Hello" />
+        <input type="text" className="input-text" placeholder="Hello" />
       </div>
     </Fragment>
   );

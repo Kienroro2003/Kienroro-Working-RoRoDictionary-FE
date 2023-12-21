@@ -11,3 +11,9 @@
     font-size: 1.6rem;
   }
 }
+
+@layer components {
+  .input-text {
+    @apply px-8 py-5 border outline-none border-white-30 rounded-2xl text-body-3 text-black-50 focus:border-primary-dark-30 focus:text-black-30 invalid:border-secondary2;
+  }
+}
