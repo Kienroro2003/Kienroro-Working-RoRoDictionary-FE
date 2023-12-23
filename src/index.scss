@@ -10,6 +10,18 @@
     font-family: "Inter", sans-serif;
     font-size: 1.6rem;
   }
+  h1 {
+    @apply text-heading-1;
+  }
+  h2 {
+    @apply text-heading-2;
+  }
+  h3 {
+    @apply text-heading-3;
+  }
+  h4 {
+    @apply text-heading-4;
+  }
 }
 
 @layer components {
