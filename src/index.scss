@@ -34,22 +34,20 @@
   }
 
   .pagination {
-    @apply flex items-center justify-end gap-8
+    @apply flex items-center justify-end gap-8;
     .previous.disabled,
     .next.disabled {
-      opacity: 0.2;
+      opacity: 0.5;
       /* visibility: hidden; */
       pointer-events: none;
     }
+
     & > li {
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 171.429%;
+      @apply text-body-4 text-black-40;
       user-select: none;
     }
     & > .selected {
-      font-weight: 700;
-      color: #796eff;
+      @apply text-primary;
     }
   }
 
