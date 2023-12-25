@@ -26,6 +26,32 @@
 
 @layer components {
   .input-text {
-    @apply px-8 py-5 border outline-none border-white-30 rounded-2xl text-body-3 text-black-50 focus:border-primary-dark-30 focus:text-black-30 invalid:border-secondary2;
+    @apply px-8 py-5 border outline-none border-white-30 rounded-2xl text-body-3 text-black placeholder:text-black-30 focus:border-primary-dark-30 focus:text-black invalid:border-secondary2;
+  }
+
+  .input-radio {
+    @apply block w-8 h-8 rounded-full border border-primary-dark-30 opacity-30 relative radio-inner transition-all before:w-6 before:h-6 before:rounded-full before:bg-primary-dark-30 before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] before:opacity-0 before:invisible;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    &:checked + .checkbox-inner {
+      @apply bg-primary border-transparent;
+      & > div {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+    &:checked + .radio-inner {
+      opacity: 1;
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 }
