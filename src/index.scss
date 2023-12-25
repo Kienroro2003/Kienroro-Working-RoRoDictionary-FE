@@ -33,6 +33,26 @@
     @apply block w-8 h-8 rounded-full border border-primary-dark-30 opacity-30 relative radio-inner transition-all before:w-6 before:h-6 before:rounded-full before:bg-primary-dark-30 before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:content-[''] before:opacity-0 before:invisible;
   }
 
+  .pagination {
+    @apply flex items-center justify-end gap-8
+    .previous.disabled,
+    .next.disabled {
+      opacity: 0.2;
+      /* visibility: hidden; */
+      pointer-events: none;
+    }
+    & > li {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 171.429%;
+      user-select: none;
+    }
+    & > .selected {
+      font-weight: 700;
+      color: #796eff;
+    }
+  }
+
   input[type="checkbox"] {
     display: none;
     &:checked + .checkbox-inner {
