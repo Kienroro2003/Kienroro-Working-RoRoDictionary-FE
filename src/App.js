@@ -1,15 +1,16 @@
 import { Fragment } from "react";
+import { Routes, Route } from "react-router-dom";
+import TestUIStules from "./pages/TestUIStyles";
+import TestUIStyles from "./pages/TestUIStyles";
 
 function App() {
   return (
-    <Fragment>
-      <div className="flex flex-col gap-2 p-7">
-        <h1 className="bg-black-90 text-primary-light-10 text-heading-1">
-          Heading 1
-        </h1>
-        <input type="text" className="input-text" placeholder="Hello" />
-      </div>
-    </Fragment>
+    <Routes>
+      <Route
+        path="/test-ui-styles"
+        element={<TestUIStyles></TestUIStyles>}
+      ></Route>
+    </Routes>
   );
 }
 
