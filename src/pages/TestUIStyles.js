@@ -11,6 +11,7 @@ const TestUIStyles = () => {
         <h1 className="bg-black-90 text-primary-light-10 text-heading-1">
           Heading 1
         </h1>
+        <h2 className="text-primary-light-20 bg-white-10">Heading 2</h2>
         <input type="text" className="input-text" placeholder="Hello" />
         <InputRadio></InputRadio>
         <InputCheckbox></InputCheckbox>
