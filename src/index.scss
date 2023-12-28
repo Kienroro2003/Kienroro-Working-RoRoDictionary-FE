@@ -22,6 +22,12 @@
   h4 {
     @apply text-heading-4;
   }
+
+  input,
+  select {
+    outline: none;
+    background-color: transparent;
+  }
 }
 
 @layer components {
