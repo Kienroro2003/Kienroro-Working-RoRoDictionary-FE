@@ -72,4 +72,17 @@
       }
     }
   }
+
+  .navbar {
+    @apply flex flex-col;
+    &__link {
+      @apply text-body-6 text-black-30 px-7 py-5 rounded-2xl;
+      &:hover {
+        @apply bg-primary-dark-80 text-white;
+      }
+      &.active {
+        @apply text-body-4 text-white bg-primary-dark-90;
+      }
+    }
+  }
 }
