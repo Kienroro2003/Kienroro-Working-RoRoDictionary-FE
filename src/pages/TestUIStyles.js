@@ -3,6 +3,7 @@ import Pagination from "../components/Pagination";
 import InputRadio from "../components/InputRadio";
 import InputSelect from "../components/InputSelect";
 import InputCheckbox from "../components/InputCheckbox";
+import Button from "../components/Button";
 
 const TestUIStyles = () => {
   return (
@@ -17,6 +18,9 @@ const TestUIStyles = () => {
         <InputCheckbox></InputCheckbox>
         <InputSelect></InputSelect>
         <Pagination totalPages={20}></Pagination>
+        <Button>Hello</Button>
+        <Button secondary>Hello</Button>
+        <Button tertiary>Hello</Button>
       </div>
     </Fragment>
   );
