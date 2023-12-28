@@ -14,7 +14,6 @@ const Sidebar = () => {
           <NavbarItem link="/test-ui-styles">Test</NavbarItem>
         </nav>
       </div>
-      <Outlet></Outlet>
     </Fragment>
   );
 };
