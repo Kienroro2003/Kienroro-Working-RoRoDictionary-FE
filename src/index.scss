@@ -27,13 +27,13 @@
   select,
   textarea {
     outline: none;
-    background-color: transparent;
+    // background-color: transparent;
   }
 }
 
 @layer components {
   .input-text {
-    @apply px-8 py-5 border outline-none border-white-30 rounded-2xl text-body-3 text-black placeholder:text-black-30 focus:border-primary-dark-30 focus:text-black invalid:border-secondary2;
+    @apply px-8 py-5 border w-full outline-none border-white-30 rounded-2xl text-body-3 text-black placeholder:text-black-30 focus:border-primary-dark-30 focus:text-black invalid:border-secondary2;
   }
 
   .input-radio {

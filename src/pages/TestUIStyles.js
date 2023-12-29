@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
 import Pagination from "../components/Pagination";
-import InputRadio from "../components/InputRadio";
-import InputSelect from "../components/InputSelect";
-import InputCheckbox from "../components/InputCheckbox";
+import InputRadio from "../components/inputs/InputRadio";
+import InputSelect from "../components/inputs/InputSelect";
+import InputCheckbox from "../components/inputs/InputCheckbox";
 import Button from "../components/Button";
 
 const TestUIStyles = () => {

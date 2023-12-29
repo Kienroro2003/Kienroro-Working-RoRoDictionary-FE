@@ -6,12 +6,12 @@ const Main = () => {
   return (
     <div className="flex">
       <Sidebar></Sidebar>
-      <div className="flex-auto bg-white-10 min-h-screen">
+      <div className="flex-auto bg-[#F9F9F9] min-h-screen">
         <div className="flex justify-center py-6">
           <form action="" className="relative pl-10">
             <input
               type="text"
-              className="text-body-6 w-[260px] placeholder:text-black-60 py-3 px-4"
+              className="text-body-6 w-[260px] placeholder:text-black-60 py-3 px-4 bg-transparent"
               placeholder="Search Appointment, Patient or etc"
             />
             <button className="absolute top-0 left-0 bottom-0">
@@ -32,7 +32,7 @@ const Main = () => {
             </button>
           </form>
         </div>
-        <div className="pt-[90px] px-[30px]">
+        <div className="pt-[30px] px-[30px]">
           <Outlet></Outlet>
         </div>
       </div>

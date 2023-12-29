@@ -20,6 +20,14 @@ const ButtonStyle = styled.button`
     css`
       background-color: #ffa900;
     `};
+  ${(props) =>
+    props.icon &&
+    css`
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `};
 `;
 
 const Button = ({ children, ...props }) => {
