@@ -11,7 +11,10 @@ const DetailWord = () => {
         <h2>Detail Word</h2>
         <div className="flex gap-2 ml-auto">
           <Button tertiary icon className="aspect-square w-12">
-            <Link className="w-full h-full flex justify-center items-center">
+            <Link
+              to={"/edit-word/1"}
+              className="w-full h-full flex justify-center items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

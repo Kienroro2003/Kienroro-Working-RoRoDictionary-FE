@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
-import InputText from "../components/inputs/InputText";
 import Button from "../components/Button";
+import InputText from "../components/inputs/InputText";
 import InputSelect from "../components/inputs/InputSelect";
 
-const CreateWord = () => {
+const EditWord = () => {
   const [formType, setFormType] = useState([
     {
       meaningCambridge: "meaning 1",
@@ -39,7 +39,7 @@ const CreateWord = () => {
   };
   return (
     <Fragment>
-      <h2>Create Word</h2>
+      <h2>Edit Word</h2>
       <form action="" className="mt-10 grid gap-x-6 gap-y-8 grid-cols-6">
         <div className="col-span-3">
           <label htmlFor="" className="text-body-5 text-black-10">
@@ -144,10 +144,7 @@ const CreateWord = () => {
         </div>
         <div className="col-span-full">
           <div className="flex justify-end gap-4">
-            <Button borderColor="#23a9f9" outline>
-              Cancel
-            </Button>
-            <Button secondary>Add</Button>
+            <Button secondary>Update</Button>
           </div>
         </div>
       </form>
@@ -155,4 +152,4 @@ const CreateWord = () => {
   );
 };
 
-export default CreateWord;
+export default EditWord;
