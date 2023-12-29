@@ -6,7 +6,7 @@ const Main = () => {
   return (
     <div className="flex">
       <Sidebar></Sidebar>
-      <div className="flex-auto bg-[#F9F9F9] min-h-screen">
+      <div className="flex-auto bg-[#F9F9F9] min-h-screen pb-8">
         <div className="flex justify-center py-6">
           <form action="" className="relative pl-10">
             <input

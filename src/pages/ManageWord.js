@@ -17,24 +17,21 @@ const ManageWord = () => {
           </tr>
         </thead>
         <tbody className="w-full">
-          <tr className="bg-white">
-            <ThItem>Hello</ThItem>
-            <ThItem>Xin chao</ThItem>
-            <ThItem>Jun 21, 2021</ThItem>
-            <ThItem>Noun, Adjective</ThItem>
-            <ThItem>
-              <Button secondary2>Delete</Button>
-            </ThItem>
-          </tr>
-          <tr className="bg-white">
-            <ThItem>Hello</ThItem>
-            <ThItem>Xin chao</ThItem>
-            <ThItem>Jun 21, 2021</ThItem>
-            <ThItem>Noun, Adjective</ThItem>
-            <ThItem>
-              <Button secondary2>Delete</Button>
-            </ThItem>
-          </tr>
+          {Array(10)
+            .fill(0)
+            .map((item, index) => {
+              return (
+                <tr className="bg-white cursor-pointer hover:bg-white-10">
+                  <ThItem>Hello</ThItem>
+                  <ThItem>Xin chao</ThItem>
+                  <ThItem>Jun 21, 2021</ThItem>
+                  <ThItem>Noun, Adjective</ThItem>
+                  <ThItem>
+                    <Button secondary2>Delete</Button>
+                  </ThItem>
+                </tr>
+              );
+            })}
         </tbody>
       </table>
       <Pagination totalPages={5}></Pagination>
