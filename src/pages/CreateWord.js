@@ -24,7 +24,7 @@ const CreateWord = () => {
             <InputText placeholder="English word (Cambridge)"></InputText>
           </div>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-full">
           <div className="flex items-center mb-2">
             <div className="text-body-5">Classification and Meaning</div>
             <Button primary icon className="w-10 h-10 ml-auto">
@@ -58,7 +58,7 @@ const CreateWord = () => {
           <div className="flex flex-col">
             <div className="grid grid-cols-8 gap-x-2 mt-2 rounded-2xl">
               <div className="col-span-2 flex gap-1">
-                <Button icon className="bg-secondary2 h-full aspect-square">
+                <Button icon secondary2 className=" h-full aspect-square">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -85,7 +85,7 @@ const CreateWord = () => {
             </div>
             <div className="grid grid-cols-8 gap-x-2 mt-2 rounded-2xl">
               <div className="col-span-2 flex gap-1">
-                <Button icon className="bg-secondary2 h-full aspect-square">
+                <Button icon secondary2 className=" h-full aspect-square">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -110,6 +110,20 @@ const CreateWord = () => {
                 <InputText placeholder="Meaning word"></InputText>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="col-span-full">
+          <label htmlFor="" className="text-body-5 text-black-10">
+            Pronoun
+          </label>
+          <InputText placeholder="Pronoun"></InputText>
+        </div>
+        <div className="col-span-full">
+          <div className="flex justify-end gap-4">
+            <Button borderColor="#23a9f9" outline>
+              Cancel
+            </Button>
+            <Button secondary>Add</Button>
           </div>
         </div>
       </form>

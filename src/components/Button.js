@@ -10,15 +10,28 @@ const ButtonStyle = styled.button`
   color: #fff;
   background-color: #796eff;
   border-radius: 5px;
+  border: 1px solid transparent
+    ${(props) =>
+      props.outline &&
+      css`
+        border-color: ${(props) => props.borderColor};
+        background-color: transparent;
+        color: #5f666f;
+      `};
   ${(props) =>
-    props.secondary &&
+    props.secondary2 &&
     css`
-      background-color: #23a9f9;
+      background-color: #ff5263;
     `};
   ${(props) =>
     props.tertiary &&
     css`
       background-color: #ffa900;
+    `};
+  ${(props) =>
+    props.secondary &&
+    css`
+      background-color: #23a9f9;
     `};
   ${(props) =>
     props.icon &&
