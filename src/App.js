@@ -7,6 +7,7 @@ import Main from "./layouts/Main";
 import Analysis from "./pages/Analysis";
 import CreateWord from "./pages/CreateWord";
 import ManageWord from "./pages/ManageWord";
+import DetailWord from "./pages/DetailWord";
 
 function App() {
   return (
@@ -14,6 +15,10 @@ function App() {
       <Route element={<Main></Main>}>
         <Route path="/" element={<Analysis></Analysis>}></Route>
         <Route path="/create-word" element={<CreateWord></CreateWord>}></Route>
+        <Route
+          path="/detail-word/:id"
+          element={<DetailWord></DetailWord>}
+        ></Route>
         <Route path="/manage-word" element={<ManageWord></ManageWord>}></Route>
         <Route
           path="/test-ui-styles"

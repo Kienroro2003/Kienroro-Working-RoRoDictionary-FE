@@ -6,6 +6,7 @@ const InputSelect = ({
   classSelect,
   classWrapOption,
   classOption,
+  disabled,
   ...props
 }) => {
   const { show, setShow, nodeRef } = useClickOutSide();
@@ -18,7 +19,9 @@ const InputSelect = ({
   return (
     <div className={`relative ${className}`} ref={nodeRef}>
       <div
-        className={`py-6 px-8 w-full border border-white-30 rounded-2xl text-body-5 text-black-30 flex items-center justify-between cursor-pointer bg-white ${classSelect}`}
+        className={`py-6 px-8 w-full border border-white-30 rounded-2xl text-body-5 text-black-30 flex items-center justify-between cursor-pointer ${
+          disabled ? "bg-transparent" : "bg-white"
+        } ${classSelect}`}
         onClick={() => setShow(!show)}
       >
         <span>{label}</span>

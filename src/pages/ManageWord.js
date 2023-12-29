@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Button from "../components/Button";
 import Pagination from "../components/Pagination";
+import { Link } from "react-router-dom";
 
 const ManageWord = () => {
   return (
@@ -21,13 +22,23 @@ const ManageWord = () => {
             .fill(0)
             .map((item, index) => {
               return (
-                <tr className="bg-white cursor-pointer hover:bg-white-10">
+                <tr className="bg-white">
                   <ThItem>Hello</ThItem>
                   <ThItem>Xin chao</ThItem>
                   <ThItem>Jun 21, 2021</ThItem>
                   <ThItem>Noun, Adjective</ThItem>
                   <ThItem>
-                    <Button secondary2>Delete</Button>
+                    <div className="flex gap-4">
+                      <Button>
+                        <Link
+                          to={`/detail-word/${index}`}
+                          className="w-full h-full"
+                        >
+                          Info
+                        </Link>
+                      </Button>
+                      <Button secondary2>Delete</Button>
+                    </div>
                   </ThItem>
                 </tr>
               );
