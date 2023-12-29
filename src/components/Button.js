@@ -10,14 +10,14 @@ const ButtonStyle = styled.button`
   color: #fff;
   background-color: #796eff;
   border-radius: 5px;
-  border: 1px solid transparent
-    ${(props) =>
-      props.outline &&
-      css`
-        border-color: ${(props) => props.borderColor};
-        background-color: transparent;
-        color: #5f666f;
-      `};
+  border: 1px solid transparent;
+  ${(props) =>
+    props.outline &&
+    css`
+      border-color: ${(props) => props.borderColor};
+      background-color: transparent;
+      color: #5f666f;
+    `};
   ${(props) =>
     props.secondary2 &&
     css`

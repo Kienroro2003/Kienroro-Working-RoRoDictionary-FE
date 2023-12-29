@@ -12,6 +12,7 @@ const Sidebar = () => {
         <nav className="navbar">
           <NavbarItem link="/">Overview</NavbarItem>
           <NavbarItem link="/create-word">Create Word</NavbarItem>
+          <NavbarItem link="/manage-word">Manage Word</NavbarItem>
           <NavbarItem link="/test-ui-styles">Test</NavbarItem>
         </nav>
       </div>
