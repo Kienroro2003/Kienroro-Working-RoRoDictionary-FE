@@ -1,9 +1,29 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import InputText from "../components/inputs/InputText";
 import Button from "../components/Button";
 import InputSelect from "../components/inputs/InputSelect";
 
 const CreateWord = () => {
+  const [formType, setFormType] = useState([
+    {
+      meaningCambridge: "",
+      meaningVietnamese: "",
+      type: "",
+    },
+  ]);
+
+  const handleAdd = (e) => {
+    e.preventDefault();
+    setFormType([
+      ...formType,
+      {
+        meaningCambridge: "",
+        meaningVietnamese: "",
+        type: "",
+      },
+    ]);
+    console.log(formType);
+  };
   return (
     <Fragment>
       <h2>Create Word</h2>
@@ -27,18 +47,23 @@ const CreateWord = () => {
         <div className="col-span-full">
           <div className="flex items-center mb-2">
             <div className="text-body-5">Classification and Meaning</div>
-            <Button primary icon className="w-10 h-10 ml-auto">
+            <Button
+              primary
+              icon
+              className="w-10 h-10 ml-auto"
+              onClick={handleAdd}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 class="w-6 h-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
@@ -56,60 +81,37 @@ const CreateWord = () => {
             </span>
           </div>
           <div className="flex flex-col">
-            <div className="grid grid-cols-8 gap-x-2 mt-2 rounded-2xl">
-              <div className="col-span-2 flex gap-1">
-                <Button icon secondary2 className=" h-full aspect-square">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
-                </Button>
-                <InputSelect className={"flex-1"}></InputSelect>
-              </div>
-              <div className="col-span-4">
-                <InputText placeholder="English word"></InputText>
-              </div>
-              <div className="col-span-2">
-                <InputText placeholder="Meaning word"></InputText>
-              </div>
-            </div>
-            <div className="grid grid-cols-8 gap-x-2 mt-2 rounded-2xl">
-              <div className="col-span-2 flex gap-1">
-                <Button icon secondary2 className=" h-full aspect-square">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
-                </Button>
-                <InputSelect className={"flex-1"}></InputSelect>
-              </div>
-              <div className="col-span-4">
-                <InputText placeholder="English word"></InputText>
-              </div>
-              <div className="col-span-2">
-                <InputText placeholder="Meaning word"></InputText>
-              </div>
-            </div>
+            {formType.map((typeItem, index) => {
+              return (
+                <div className="grid grid-cols-8 gap-x-2 mt-2 rounded-2xl">
+                  <div className="col-span-2 flex gap-1">
+                    <Button icon secondary2 className=" h-full aspect-square">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6 18 18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </Button>
+                    <InputSelect className={"flex-1"}></InputSelect>
+                  </div>
+                  <div className="col-span-4">
+                    <InputText placeholder="English word"></InputText>
+                  </div>
+                  <div className="col-span-2">
+                    <InputText placeholder="Meaning word"></InputText>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className="col-span-full">
