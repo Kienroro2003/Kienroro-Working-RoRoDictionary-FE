@@ -4,12 +4,13 @@ import TestUIStules from "./pages/TestUIStyles";
 import TestUIStyles from "./pages/TestUIStyles";
 import Sidebar from "./components/Sidebar";
 import Main from "./layouts/Main";
+import Analysis from "./pages/Analysis";
 
 function App() {
   return (
     <Routes>
       <Route element={<Main></Main>}>
-        <Route path="/" element={<></>}></Route>
+        <Route path="/" element={<Analysis></Analysis>}></Route>
         <Route
           path="/test-ui-styles"
           element={<TestUIStyles></TestUIStyles>}

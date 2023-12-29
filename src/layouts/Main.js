@@ -32,7 +32,9 @@ const Main = () => {
             </button>
           </form>
         </div>
-        <Outlet></Outlet>
+        <div className="pt-[90px] px-[30px]">
+          <Outlet></Outlet>
+        </div>
       </div>
     </div>
   );
